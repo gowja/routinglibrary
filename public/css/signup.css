@@ -1,0 +1,26 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+a:hover{
+    color: white;
+    background-color: thistle;
+}
+div.container.jumbotron{
+    margin-top: 3%;
+    font-family: fantasy;
+    font-size: 25px;
+    background-color: rgba(105, 105, 105, 0.774);
+}
+.last{
+    margin-top: 5%;
+    margin-left: 3%;
+}
+.ff{
+    color: slategrey;
+}
+
+#res{
+    text-align: center;
+    font-family: cursive;
+}
