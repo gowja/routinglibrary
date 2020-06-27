@@ -1,3 +1,4 @@
+// const signupdata=require('../../src/model/signupdata');
 let email=document.getElementById("email");
 let pw=document.getElementById("pw");
 var stg=0;

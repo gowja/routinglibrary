@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%=title%></title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-sm " style="background-color: rgba(8, 8, 99, 0.685)">
@@ -27,34 +27,27 @@
     <div class="container parent">
         <%for(i=0;i<book.length;i++){%>
         <div>
-            <img class="a" src="/images/<%=book[i].img%>">
+            <img class="a" src="/images/<%=book[i].image%>" alt="not found">
             <div class="aa">
                 <h4 style="color: slategrey;"><b><%=book[i].title%></b></h4>
                 <h6><span class="lb"><b><%=book[i].author%></b></span></h6>
-                <p class="pp"><%=book[i].genre%><b>.</b>  Read more</p>
+                <p class="pp"><%=book[i].genre%><b>.</b> <a href="/books/<%=book[i]._id%>">Read more</a></p>
+                <!-- <a href="/books/'d'<%=book[i]._id%>">Delete</a> -->
+                <!-- <form action="/books/del" method="POST">
+                    <input type="text" value="<%=book[i]._id%>" name="id">
+                    <button type="submit">Delete</button>
+                </form> -->
+
+                <!-- edit -->
+                <!-- <form action="/books/edit" method="POST">
+                    <input type="text" value="<%=book[i]._id%>" name="id">
+                    <button type="submit">Edit</button>
+                </form> -->
             </div>
         </div>
         <hr>
         <%}%>
-        <!-- <div>
-            <img class="a" src="images/img2.jpg">
-            <div class="aa">
-                <h4 style="color: slategrey;"><b>14 Useful sites for designers</b></h4>
-                <h6><span class="lb"><b>devgrage.com</b></span></h6>
-                <p class="pp">5 hours ago  <b>.</b>  Read more</p>
-            </div>
-        </div>
-        <hr>
-
-        <div>
-            <img class="a" src="images/img3.jpg">
-            <div class="aa">
-                <h4 style="color: slategrey;"><b>Trend paper - what's trending in the world</b></h4>
-                <h6><span class="lb"><b>betail.st</b></span></h6>
-                <p class="pp">Last week   <b>.</b> Read more</p>
-            </div>
-        </div>
-        <hr> -->
+      
         <button class="btn bg-primary">More</button>
     </div>
 
@@ -66,6 +59,6 @@
             <button type="button" class="btn btn-danger">Google+</button>
          </div>
     </div>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

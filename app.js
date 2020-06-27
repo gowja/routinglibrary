@@ -11,6 +11,7 @@ app.use(express.static('./public'));
 app.set('view engine','ejs');
 app.set('views','./src/views');
 
+app.use(express.urlencoded({extended:true}));
 app.use('/signin',signin);
 app.use('/books',books);
 app.use('/signup',signup);

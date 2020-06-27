@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%=title%></title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-sm " style="background-color: rgba(8, 8, 99, 0.685)">
@@ -27,16 +27,30 @@
     <div class="container parent">
         <%for(i=0;i<athr.length;i++){%>
         <div>
-            <img class="a" src="/images/<%=athr[i].img%>">
+            <img class="a" src="/images/<%=athr[i].image%>">
             <div class="aa">
                 <h4 style="color: slategrey;"><b><%=athr[i].name%></b></h4>
-                <p class="pp"><%=athr[i].about%></p>
+                <p class="pp"><%=athr[i].about%></p><a href="/authors/<%=athr[i]._id%>">Read More</a>
               
             </div>
+            <br>
+            <form action="/authors/del" method="POST">
+                <input type="text" value="<%=athr[i]._id%>" name="id" hidden>
+                <button class="btn btn-success">Delete</button>
+            </form>
+            <br>
+            <form action="/authors/edit" method="POST">
+                <input type="text" value="<%=athr[i]._id%>" name="id" hidden>
+                <button class="btn btn-danger">Edit</button>
+            </form>
         </div>
-        
         <%}%>
+        
         <hr>
+
+        <form action="/authors/add">
+            <button class="btn btn-secondary">ADD</button>
+        </form>
         <button class="btn bg-primary">More</button>
     </div>
 
@@ -48,6 +62,6 @@
             <button type="button" class="btn btn-danger">Google+</button>
          </div>
     </div>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

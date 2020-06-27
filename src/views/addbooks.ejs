@@ -6,7 +6,6 @@
     <title><%=title%></title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/signin.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-sm " style="background-color: rgba(8, 8, 99, 0.685)">
@@ -27,24 +26,23 @@
 
     <div class="container parent">
         <br>
-        <form >
+        <form method="POST" action="/add/added">
             <div class="form-group">
                 <label>Title</label><br>
-                <input type="text" id="email" class="form-control" placeholder="book title" required><br>
+                <input type="text" id="title" name="title" class="form-control" placeholder="book title" required><br>
             </div>
             <div class="form-group">
                 <label>Author</label>
-                <input type="text" class="form-control" id="pw" placeholder="author" required><br>
+                <input type="text" class="form-control" name="author" id="author" placeholder="author" required><br>
             </div>
             <div class="form-group">
-                <label>Edition</label>
-                <input type="number" class="form-control" id="pw" placeholder="edition" required><br>
+                <label>Genre</label>
+                <input type="text" class="form-control" name="genre" id="genre" placeholder="genre" required><br>
             </div>
             <div class="form-group">
-                <label>Year of Publication</label>
-                <input type="number" class="form-control" id="pw" placeholder="year of publication" required><br>
+                <label>Image : </label><br>
+                <input type="file" name="image" id="img"><br><br>
             </div>
-            
             <div class="form-group">
                 <button type="submit" class="btn btn-lg btn-block btn-outline-secondary">ADD</button>
             </div>
