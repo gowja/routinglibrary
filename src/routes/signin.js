@@ -1,7 +1,7 @@
 const express=require("express");
 const signin=express.Router();
-const signupdata=require('../model/signupdata');
-const signindata=require('../model/signupdata');
+const updata=require('../model/signupdata');
+const indata=require('../model/signupdata');
 
 
 function routs(nav){
@@ -18,8 +18,8 @@ function routs(nav){
             mail:req.body.email,
             pw:req.body.password
         }
-        var valid=signindata(obj);
-        signupdata.findOne({email:valid.mail,password:valid.pw},function(err,user){
+        var valid=indata(obj);
+        updata.findOne({email:valid.mail,password:valid.pw},function(err,user){
             if(err){
                 res.send(err);
             }

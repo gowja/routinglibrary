@@ -1,7 +1,7 @@
 const express=require("express");
 const signup=express.Router();
-const signupdata=require('../model/signupdata');
-const signindata=require('../model/signupdata');
+const updata=require('../model/signupdata');
+const indata=require('../model/signupdata');
 
 function routs(nav){
     signup.get('/',function(req,res){
@@ -21,8 +21,8 @@ function routs(nav){
            phone:req.body.phone,
            password:req.body.password
         };
-        var sign=signindata(item);
-        var details=signupdata(item);
+        var sign=indata(item);
+        var details=updata(item);
         details.save();
         sign.save();
         res.redirect('/signin');

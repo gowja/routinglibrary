@@ -4,7 +4,7 @@ const schema=mongoose.Schema;
 const schema1=mongoose.Schema;
 
 
-const signup=new schema({
+const up=new schema({
     name:String,
     age:String,
     gender:String,
@@ -14,15 +14,15 @@ const signup=new schema({
     password:String
 });
 
-const signin=new schema1({
+const sin=new schema1({
     semail:String,
     spassword:String
 });
 
 
-var signupdata=mongoose.model('signupdata',signup);
-var signindata=mongoose.model('signindata',signin);
+var updata=mongoose.model('signupdata',up);
+var indata=mongoose.model('signindata',sin);
 
 
-module.exports=signupdata;
-module.exports=signindata;
+module.exports=updata;
+module.exports=indata;
